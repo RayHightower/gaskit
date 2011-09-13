@@ -1,10 +1,12 @@
-GIT
-  remote: git://github.com/bkeepers/adapter-git.git
-  revision: 24ff408e8ca8db6d687ea8a28ced516fd6234663
+PATH
+  remote: .
   specs:
-    adapter-git (0.5.0)
-      adapter (~> 0.5.1)
-      grit (~> 2.0)
+    gaskit (0.1.0)
+      adapter-git
+      sass
+      sinatra
+      sprockets (~> 2.0.0.beta.15)
+      toystore
 
 GEM
   remote: http://rubygems.org/
@@ -15,6 +17,9 @@ GEM
       i18n (~> 0.5.0)
     activesupport (3.0.10)
     adapter (0.5.2)
+    adapter-git (0.5.0)
+      adapter (~> 0.5.1)
+      grit (~> 2.0)
     archive-tar-minitar (0.5.2)
     builder (2.1.2)
     capybara (1.0.1)
@@ -99,7 +104,7 @@ GEM
     sprockets (2.0.0)
       hike (~> 1.2)
       rack (~> 1.0)
-      tilt (~> 1.1, != 1.3.0)
+      tilt (!= 1.3.0, ~> 1.1)
     term-ansicolor (1.0.6)
     tilt (1.3.3)
     toystore (0.8.2)
@@ -114,18 +119,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  adapter-git!
   capybara
   capybara-webkit
   cucumber
   factory_girl
+  gaskit!
   launchy
   rack-test
   rake
   rspec
   ruby-debug
   ruby-debug19
-  sass
-  sinatra
-  sprockets (~> 2.0.0.beta.15)
-  toystore

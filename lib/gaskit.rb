@@ -1,6 +1,3 @@
-require 'bundler'
-Bundler.require
-
 module Gaskit
   autoload :App, 'gaskit/app'
 
@@ -17,5 +14,8 @@ module Gaskit
   end
 end
 
+require 'adapter-git'
+require 'toystore'
+require 'gaskit/version'
 require 'gaskit/story'
 require 'gaskit/user'
