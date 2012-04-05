@@ -2,7 +2,7 @@ ENV['RACK_ENV'] = 'test'
 
 require 'bundler'
 Bundler.require :default, 'test'
-require 'gaskit'
+require 'gaskit/app'
 
 require 'factories'
 require 'factory_girl/step_definitions'

@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sprockets'
 require 'sass'
+require 'gaskit'
 
 module Gaskit
   class App < Sinatra::Base
