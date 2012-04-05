@@ -16,3 +16,8 @@ group :development, :test do
   gem 'ruby-debug',   :platform => :mri_18
   gem 'ruby-debug19', :platform => :mri_19, :require => 'ruby-debug'
 end
+
+group :guard do
+  gem 'guard'
+  gem 'guard-rspec'
+end
