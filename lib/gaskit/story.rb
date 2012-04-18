@@ -3,7 +3,7 @@ module Gaskit
     include Toy::Store
     self.include_root_in_json = false
 
-    store :git, Gaskit.repo, :branch => 'gaskit', :path => 'stories'
+    adapter :git, Gaskit.repo, :branch => 'gaskit', :path => 'stories'
 
     attribute :description, String
     attribute :type,        String, :default => 'feature'
@@ -32,9 +32,9 @@ module Gaskit
   private
 
     def self.contents
-      head = store.head
+      head = adapter.head
 
-      if head && tree = head.commit.tree / store.options[:path]
+      if head && tree = head.commit.tree / adapter.options[:path]
         tree.contents
       else
         []
