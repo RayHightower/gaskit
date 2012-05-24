@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'sinatra'
   s.add_dependency 'adapter-git'
   s.add_dependency 'toystore'
-  s.add_dependency 'sprockets', '~> 2.0.0.beta.15'
+  s.add_dependency 'sprockets', '2.0.0'
   s.add_dependency 'sass'
 end
