@@ -17,6 +17,8 @@ Capybara.asset_root = Gaskit.root.join('public')
 Capybara.save_and_open_page_path = Gaskit.root.join('tmp/capybara')
 Capybara.javascript_driver = ENV['SELENIUM'] ? :selenium : :webkit
 
+Gaskit.repo = Grit::Repo.init(Gaskit.root.join('testrepo').to_s)
+
 Before do
   Gaskit.repo.git.fs_delete("refs/heads/gaskit")
 end

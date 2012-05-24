@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'gaskit/cli'
+
+Gaskit::CLI.new(ARGV).run

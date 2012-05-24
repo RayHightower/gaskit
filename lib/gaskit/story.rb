@@ -3,7 +3,8 @@ module Gaskit
     include Toy::Store
     self.include_root_in_json = false
 
-    adapter :git, Gaskit.repo, :branch => 'gaskit', :path => 'stories'
+    adapter :git, Gaskit::ToyStore::LazyAdapter.new { Gaskit.repo },
+      :branch => 'gaskit', :path => 'stories'
 
     attribute :description, String
     attribute :type,        String, :default => 'feature'

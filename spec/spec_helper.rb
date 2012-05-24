@@ -5,6 +5,8 @@ Bundler.require 'test'
 require 'gaskit'
 require 'factories'
 
+Gaskit.repo = Grit::Repo.init(Gaskit.root.join('testrepo').to_s)
+
 RSpec.configure do |config|
   config.include Factory::Syntax::Methods
 
